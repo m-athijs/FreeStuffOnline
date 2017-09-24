@@ -4,7 +4,7 @@ date: 2017-09-24T17:54:35+02:00
 tagline: "Image is everything"
 buttontext: "Let's do some Visual Hunting"
 image: "window-collage-italy.jpg"
-weight: 1
+weight: 2
 draft: false
 ---
 

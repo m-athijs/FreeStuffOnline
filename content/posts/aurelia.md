@@ -4,7 +4,7 @@ date: 2017-09-24T17:45:39+02:00
 tagline: "One framework to rule them all"
 buttontext: "Tell me about Aurelia"
 image: "rust-rusty-metal-framework-nettle-plant-green.jpg"
-weight: 2
+weight: 1
 draft: false
 ---
 
