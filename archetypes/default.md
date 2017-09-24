@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+tagline: [enter a tagline]
+buttontext: [enter a button text]
+image: [enter image file name]
+draft: false
 ---
-

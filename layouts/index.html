@@ -1,15 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>FreeStuffOnline</title>
+    <title>Story Test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/main.css" />
 </head>
+<!-- Scripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.scrollex.min.js"></script>
+<script src="/js/jquery.scrolly.min.js"></script>
+<script src="/js/skel.min.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+
 <body>
-	<h1>FreeStuffOnline</h1>
-	<ul>
-		{{ range .Pages }}
-			<li><a href="{{ .URL }}">{{ .Title }}</a></li>
-		{{ end }}
-	</ul>
+    <div id="wrapper" class="divided">
+        <section class="banner style5 orient-center content-align-center image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+            <div class="content">
+                <h1>Free Stuff Online<br/>for web developers</h1>
+                <p class="major">There are so many free software tools and resources available online for web developers! Unfortunately, a lot of these tools are not that great. But some of them are. I'm here to separate the men from the boys, so to speak. I'll even show you how to use some of the best tools.</p>
+                <ul class="actions vertical">
+                    <li><a href="#first" class="button big wide smooth-scroll">Show me the good stuff</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="/img/view-of-clouds-from-plane-interior.jpg" alt="" />
+            </div>
+        </section>
+    	{{ range $i, $p := .Pages }}
+        <section class="spotlight style5 {{ if not (modBool $i 2) }}orient-right{{ end }}{{ if (modBool $i 2) }}orient-left{{ end }} content-align-left image-position-right onscroll-image-fade-in onscroll-content-fade-left" {{ if eq $i 0 }}id="first"{{ end }}>
+            <div class="content">
+                <h2 class="align-center">{{ .Params.tagline }}</h2>
+                <hr>
+                {{ .Summary }}
+                <hr>
+                <ul class="actions vertical align-center">
+                    <li><a href="{{ .URL }}" class="button">{{ .Params.buttontext }}</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="/img/{{ .Params.image }}" alt="" />
+            </div>
+        </section>
+    	{{ end }}
+<!--         <section class="spotlight style5 orient-left content-align-left image-position-right onscroll-image-fade-in onscroll-content-fade-left" id="first">
+            <div class="content">
+                <h2 class="align-center">One framework to rule them all</h2>
+                <hr>
+                <p>Client side Javascript frameworks are popping up like weed nowadays. And yes, if you do client side
+                development, you probably need some kind of framework. Unless you want to get really masochistic about 
+            	it and do all the tedious Javascript plumbing yourself.</p>
+            	<p>But what framework to use? You can play it safe and use one of the popular frameworks everybody uses, like <a href="https://angular.io" target="_blank">AngularJS</a> <i class="icon style1 fa-external-link"></i> or <a href="https://facebook.github.io/react/" target="_blank">React</a> <i class="icon style1 fa-external-link"></i>. Or you can try something new and potentially better, like <a href="http://aurelia.io" target="_blank">Aurelia</a> <i class="icon style1 fa-external-link"></i>. I'd go for the latter, if I were you.</p>
+                <hr>
+                <ul class="actions vertical align-center">
+                    <li><a href="#" class="button">Tell me about Aurelia</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="/img/rust-rusty-metal-framework-nettle-plant-green.jpg" alt="" />
+            </div>
+        </section>
+        <section class="spotlight style5 orient-right content-align-left image-position-center onscroll-image-fade-in onscroll-content-fade-right">
+            <div class="content">
+                <h2 class="align-center">Image is everything</h2>
+                <hr>
+                <p>They say a picture is worth a thousand words. That's true, if you have the right picture. So if you
+                are not a great photographer yourself and don't want to spend a lot of money on professional photos, you need a backup plan.</p>
+                <p>Fortunately, there is <a href="https://visualhunt.com" target="_blank">VisualHunt</a> <i class="icon style1 fa-external-link"></i>, your one stop shop for free yet great photos. I mean, just look
+                at the photos on this website. Need I say more?</p>
+                <hr>
+                <ul class="actions vertical align-center">
+                    <li><a href="https://visualhunt.com" target="_blank" class="button">Let's do some Visual Hunting <i class="icon style1 fa-external-link"></i></a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="/img/window-collage-italy.jpg" alt="" />
+            </div>
+        </section>
+        <section class="spotlight style5 orient-left content-align-left image-position-right onscroll-image-fade-in onscroll-content-fade-left">
+            <div class="content">
+                <h2 class="align-center">A CMS with no head</h2>
+                <hr>
+                <p>This is a <strong>Spotlight</strong> element, and it's generally used &ndash; as its name implies &ndash; to spotlight a particular feature, subject, or pretty much whatever. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-spotlight">details</a>).</p>
+                <hr>
+                <ul class="actions vertical">
+                    <li><a href="#" class="button">Learn More</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="/img/headless.jpg" alt="" />
+            </div>
+        </section>
+        <section class="spotlight style5 orient-right content-align-left image-position-center onscroll-image-fade-in onscroll-content-fade-right">
+            <div class="content">
+                <h2>Tools of the trade</h2>
+                <hr>
+                <p>And yes, this is another <strong>Spotlight</strong> element, and it's also here because I need to fill a bit of space. Naturally, like any other spotlight, you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-spotlight">details</a>).</p>
+                <hr>
+                <ul class="actions vertical">
+                    <li><a href="#" class="button">Learn More</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="/img/aerial-view-of-carpenters-tools-on-wooden-table.jpg" alt="" />
+            </div>
+        </section> -->
+        <footer class="wrapper style1 align-center">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <p>&copy; 2017 FreeStuffOnline. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>. Images: <a href="https://www.visualhunt.com" target="_blank">VisualHunt</a></p>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>
