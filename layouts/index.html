@@ -29,7 +29,7 @@
                 <img src="/img/view-of-clouds-from-plane-interior.jpg" alt="" />
             </div>
         </section>
-    	{{ range $i, $p := .Pages }}
+    	{{ range $i, $p := .Pages.ByWeight }}
         <section class="spotlight style5 {{ if not (modBool $i 2) }}orient-right{{ end }}{{ if (modBool $i 2) }}orient-left{{ end }} content-align-left image-position-right onscroll-image-fade-in onscroll-content-fade-left" {{ if eq $i 0 }}id="first"{{ end }}>
             <div class="content">
                 <h2 class="align-center">{{ .Params.tagline }}</h2>
