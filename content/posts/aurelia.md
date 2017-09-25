@@ -1,11 +1,12 @@
 ---
-title: "Aurelia"
-date: 2017-09-24T17:45:39+02:00
-tagline: "One framework to rule them all"
-buttontext: "Tell me about Aurelia"
-image: "rust-rusty-metal-framework-nettle-plant-green.jpg"
+title: Aurelia
+date: {}
+tagline: One framework to rule them all
+buttontext: Tell me about Aurelia
+image: rust-rusty-metal-framework-nettle-plant-green.jpg
 weight: 1
 draft: false
+published: true
 ---
 
 Client side Javascript frameworks are popping up like weed nowadays. And yes, if you do client side development, you probably need some kind of framework. Unless you want to get really masochistic about it and do all the tedious Javascript plumbing yourself.
@@ -14,4 +15,4 @@ But what framework to use? You can play it safe and use one of the popular frame
 
 <!--more-->
 
-More content here...
+More content here, now edited with prose.io
