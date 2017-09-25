@@ -5,7 +5,6 @@ tagline: A CMS with no head
 buttontext: Direct me to Directus
 image: headless.jpg
 weight: 3
-draft: false
 ---
 
 Headless CMSs (or is it CMSes or CMS's) are all the rage. And rightly so, because it makes sense to decouple your content from your website implementation. They come in all shapes and sizes, from free to expensive, from cloud based to self-hosted.

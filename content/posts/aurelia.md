@@ -5,8 +5,6 @@ tagline: One framework to rule them all
 buttontext: Tell me about Aurelia
 image: rust-rusty-metal-framework-nettle-plant-green.jpg
 weight: 1
-draft: false
-published: true
 ---
 
 Client side Javascript frameworks are popping up like weed nowadays. And yes, if you do client side development, you probably need some kind of framework. Unless you want to get really masochistic about it and do all the tedious Javascript plumbing yourself.
